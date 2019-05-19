@@ -1,0 +1,56 @@
+.header {
+    width: 61.8%;
+    height: 100px;
+    margin: 8px auto;
+    border-radius: 10px;
+    background-color: orange;
+    box-shadow: 3px 3px 5px 3px #cccccc;
+}
+
+.title {
+    color: white;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.container {
+    display: flex;
+    width: 61.8%;
+    height: 700px;
+    margin: 0 auto;
+}
+
+.left {
+    width: 30%;
+    height: 100%;
+    margin-right: 8px;
+    border-radius: 10px;
+    background-color: orange;
+    box-shadow: 3px 3px 5px 3px #cccccc;
+}
+
+.right {
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 3px 3px 5px 3px #cccccc;
+}
+
+.site-info {
+    font-size: 12px;
+}
+
+.site-info-item {
+    text-align: center;
+} 
+
+.site-info-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    background: url(../../assets/beian-icon.png) 0 0 no-repeat;
+    vertical-align: middle;
+    margin-top: -4px;
+}
