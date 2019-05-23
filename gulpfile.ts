@@ -1,3 +1,18 @@
+var gulp = require('gulp');
+var sftp = require('gulp-sftp');
+ 
+gulp.task('server', function () {
+  return gulp.src('./dist/**/*')
+    .pipe(sftp({
+      host: '111.230.139.176',
+      port: 22,
+      user: 'root',
+      pass: 'lyc741753cc',
+      remotePath:'/home/'
+    }));
+});
+
+
 // // var gulp = require('gulp');
 // // // import * as gulp from 'gulp';
 // // gulp.task('default', function() {
