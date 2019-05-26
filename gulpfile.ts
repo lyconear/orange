@@ -1,17 +1,24 @@
 var gulp = require('gulp');
 var sftp = require('gulp-sftp');
+var del = require('del');
+var vinylPaths = require('vinyl-paths');
  
 gulp.task('server', function () {
-  return gulp.src('./dist/**/*')
+  return gulp.src('./dist/MrOrange/*')
     .pipe(sftp({
-      host: '111.230.139.176',
+      host: '',
       port: 22,
       user: 'root',
-      pass: 'lyc741753cc',
-      remotePath:'/home/'
+      pass: '',
+      remotePath:'/home/apache-tomcat-8.5.28/webapps/ROOT/'
     }));
 });
 
+gulp.task('del', function (cb) {
+    return del([
+       './dist'
+    ], cb);
+  });
 
 // // var gulp = require('gulp');
 // // // import * as gulp from 'gulp';
@@ -108,14 +115,3 @@ gulp.task('server', function () {
 // // gulp.task("build", ['compile', 'resources', 'libs'], () => {
 // //     console.log("Building the project ...");
 // // });
-function print() {
-    console.log('start!!!');
-}
-
-function defaultTask(cb) {
-    // place code for your default task here
-    console.log('aaa');
-    cb();
-  }
-  
-  exports.default = defaultTask
